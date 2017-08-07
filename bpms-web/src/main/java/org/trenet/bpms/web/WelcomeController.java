@@ -19,7 +19,6 @@ public class WelcomeController {
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String index() {	
-		logger.debug(welcomeService.welcome());
 		return "index";
 	}
 	

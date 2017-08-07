@@ -1,5 +1,8 @@
 package org.trenet.bpms.service.rs.impl;
 
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Response.Status;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.trenet.bpms.service.internal.WelcomeService;
@@ -12,8 +15,8 @@ public class WelcomeRestServiceImpl implements WelcomeRestService {
 	private WelcomeService welcomeService;
 	
 	@Override
-	public String welcome() {
-		return welcomeService.welcome();
+	public Response welcome() {
+		return Response.status(Status.OK).entity(welcomeService.welcome()).build();
 	}
 
 }
