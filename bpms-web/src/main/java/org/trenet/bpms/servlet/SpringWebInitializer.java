@@ -33,4 +33,5 @@ public class SpringWebInitializer implements WebApplicationInitializer {
 		cxf.setLoadOnStartup(1);
 		cxf.addMapping("/service/*");
 	}
+	
 }

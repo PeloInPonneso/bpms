@@ -40,12 +40,14 @@ public class WebServicesConfig {
 	
 	@Bean(name = Bus.DEFAULT_BUS_ID)
 	public SpringBus springBus() {
-	    return new SpringBus();
+		SpringBus bus = new SpringBus();
+		bus.setApplicationContext(ctx);
+	    return bus;
 	}
 	
 	@Bean
 	public Endpoint welcome() {
-	    EndpointImpl endpoint = new EndpointImpl(springBus(), new WelcomeWebServiceImpl());
+	    EndpointImpl endpoint = new EndpointImpl(springBus(), ctx.getBean(WelcomeWebServiceImpl.class));
 	    endpoint.publish(ctx.getEnvironment().getProperty("org.trenet.bpms.service.ws.welcome"));
 	    return endpoint;
 	}

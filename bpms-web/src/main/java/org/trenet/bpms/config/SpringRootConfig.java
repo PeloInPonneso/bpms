@@ -12,7 +12,7 @@ import org.springframework.context.annotation.PropertySource;
  */
 @Configuration
 @PropertySource( "classpath:application.properties" )
-@ComponentScan({ "org.trenet.bpms.service.internal", "org.trenet.bpms.service.rs" })
+@ComponentScan({ "org.trenet.bpms.service.internal", "org.trenet.bpms.service.rs", "org.trenet.bpms.service.ws" })
 public class SpringRootConfig {
 	
 	@Bean
