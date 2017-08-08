@@ -53,11 +53,21 @@
 		</plugins>
 	</build>
 	<dependencies>
-		<!-- ? Remove Jboss Logging and Jboss Transaction Api ? -->
+		<!-- Remove Jboss Logging and Jboss Transaction Api -->
 		<dependency>
 		   <groupId>org.hibernate</groupId>
 		   <artifactId>hibernate-entitymanager</artifactId>
 		   <version>4.2.21.Final</version>
+		   <exclusions>
+				<exclusion>
+					<groupId>org.jboss.logging</groupId>
+				    <artifactId>jboss-logging</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.jboss.spec.javax.transaction</groupId>
+    				<artifactId>jboss-transaction-api_1.1_spec</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 		    <groupId>org.springframework.data</groupId>
