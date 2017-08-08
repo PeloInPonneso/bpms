@@ -4,7 +4,7 @@ import javax.jws.WebService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.trenet.bpms.Item;
+import org.trenet.bpms.model.Item;
 import org.trenet.bpms.service.internal.WelcomeService;
 import org.trenet.bpms.service.ws.WelcomeWebService;
 

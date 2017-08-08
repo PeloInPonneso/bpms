@@ -1,15 +1,19 @@
-package org.trenet.bpms;
+package org.trenet.bpms.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlRootElement;
 
+
 @XmlRootElement
+@Entity
 public class Item implements Serializable {
 
 	private static final long serialVersionUID = -122975065758094591L;
 	
-	private Long id;
+	@Id private Long id;
 	private String code;
 	private String description;
 	

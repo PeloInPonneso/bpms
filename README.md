@@ -1,4 +1,7 @@
-## Spring 4 with Servlet Api 3.1, Logback and CXF
+## Servlet Api 3.1, Spring Framework 4, Logback
+
+### Spring Data Jpa, Hibernate 4 and CXF
+In Memory H2 Database for Test and development
 Run the Application with mvn jetty:run
 
 ### Rest Service
