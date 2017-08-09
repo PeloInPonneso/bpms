@@ -1,5 +1,7 @@
 package org.trenet.bpms.service.internal.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.trenet.bpms.dao.ItemDao;
@@ -13,9 +15,8 @@ public class WelcomeServiceImpl implements WelcomeService {
 	private ItemDao itemDao;
 	
 	@Override
-	public Item welcome() {
-		Item item = itemDao.save(new Item(1l, "TEST", "This is a Test Item"));
-		return item;
+	public List<Item> findAllItems() {
+		return itemDao.findAll();
 	}
 
 }

@@ -14,7 +14,7 @@ import org.trenet.bpms.model.Item;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {SpringRootConfig.class, PersistanceConfig.class})
-public class ItemSpring4JUnit4Test {
+public class ItemSpring4JUnit4IT {
 	
 	@Autowired
 	private ItemDao itemDao;

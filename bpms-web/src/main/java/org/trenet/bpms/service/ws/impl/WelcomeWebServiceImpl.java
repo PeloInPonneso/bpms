@@ -1,5 +1,7 @@
 package org.trenet.bpms.service.ws.impl;
 
+import java.util.List;
+
 import javax.jws.WebService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +18,8 @@ public class WelcomeWebServiceImpl implements WelcomeWebService {
 	private WelcomeService welcomeService;
 	
 	@Override
-	public Item welcome() {
-		return welcomeService.welcome();
+	public List<Item> welcome() {
+		return welcomeService.findAllItems();
 	}
 
 }
